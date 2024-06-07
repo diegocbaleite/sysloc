@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        //$pegaId->bind_param('s',$username);
       // $user_id = $pegaId->execute();
    
+        //vou modificar essa parte
         
         $stmt = $conexao->prepare("INSERT INTO fiscalizacao (municipio, operador, data_inicio, data_fim, status) VALUES (?, ?, ?, ?, 'ANDAMENTO')");
         $stmt->bind_param("ssss", $municipio, $operador, $data_inicio, $data_fim);
